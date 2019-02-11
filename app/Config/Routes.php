@@ -74,7 +74,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->resource('guide', ['controller'=>'Guide_Controller']);
-$routes->resource('User', ['controller' => 'app\Controllers\User_Controller']);
+$routes->resource('Guide', ['controller'=>'Guide_Controller']);
+$routes->resource('user',  ['controller'=>'User_Controller']);
+$routes->resource('User',  ['controller'=>'User_Controller']);
 
 /**
  * --------------------------------------------------------------------
