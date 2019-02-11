@@ -47,6 +47,10 @@
 				margin-top: 0;
 				color: #999;
 			}
+            .user {
+				margin-top: 3rem;
+				text-align: left;
+			}
 			.guide {
 				margin-top: 3rem;
 				text-align: left;
@@ -104,59 +108,60 @@
 				</svg>
 			</div>
 
-			<div class="guide">
+			<div class="user">
 				<li><a href="<?php echo site_url('User')?>">Users</a></li>
-            <ol>
-                <li><a href="<?php echo site_url('User/1')?>">User1</a></li>
-                <form action="<?php echo site_url('User/1/edit')?>" method="get">
-                    <button type="submit">Edit</button>
+                    <ol>
+                        <li><a href="<?php echo site_url('User/1')?>">User1</a></li>
+                        <form action="<?php echo site_url('User/1/edit')?>" method="get">
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form action="<?php echo site_url('User/1/update')?>" method="post">
+                            <input type="hidden" name="_method" value="put" />
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="<?php echo site_url('User/1/delete')?>" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <li><a href="<?php echo site_url('User/2')?>">User2</a></li>
+                        <li><a href="<?php echo site_url('User/3')?>">User3</a></li>
+                        <li><a href="<?php echo site_url('User/4')?>">User4</a></li>
+                        <li><a href="<?php echo site_url('User/5')?>">User5</a></li>
+                        <li><a href="<?php echo site_url('User/6')?>">User6</a></li>
+                    </ol>
+                <form action="<?php echo site_url('User/new')?>" method="get">
+                    <button type="submit">New</button>
                 </form>
-                <form action="<?php echo site_url('User/1')?>" method="post">
-                    <input type="hidden" name="_method" value="put" />
-                    <button type="submit">Update</button>
+                <form action="<?php echo site_url('User')?>" method="post">
+                    <button type="submit">Create</button>
                 </form>
-                <form action="<?php echo site_url('User/1/delete')?>" method="post">
-                    <button type="submit">Delete</button>
-                </form>
-                <li><a href="<?php echo site_url('User/2')?>">User2</a></li>
-                <li><a href="<?php echo site_url('User/3')?>">User3</a></li>
-                <li><a href="<?php echo site_url('User/4')?>">User4</a></li>
-                <li><a href="<?php echo site_url('User/5')?>">User5</a></li>
-                <li><a href="<?php echo site_url('User/6')?>">User6</a></li>
-            </ol>
-            <form action="<?php echo site_url('User/new')?>" method="get">
-                <button type="submit">New</button>
-            </form>
-            <form action="<?php echo site_url('User')?>" method="post">
-                <button type="submit">Create</button>
-            </form>
+            </div>
 
-            <br/><br/>
-                <li><a href="<?php echo site_url('Guide')?>">Businesses</a></li>
-                <ol>
-                    <li><a href="<?php echo site_url('Guide/1')?>">Leo Lamriello</a></li>
-                    <form action="<?php echo site_url('Guide/1/edit')?>" method="get">
-                        <button type="submit">Edit</button>
-                    </form>
-                    <form action="<?php echo site_url('Guide/1')?>" method="post">
-                        <input type="hidden" name="_method" value="put" />
-                        <button type="submit">Update</button>
-                    </form>
-                    <form action="<?php echo site_url('Guide/1/delete')?>" method="post">
-                        <button type="submit">Delete</button>
-                    </form>
-                    <li><a href="<?php echo site_url('Guide/2')?>">Guide1</a></li>
-                    <li><a href="<?php echo site_url('Guide/3')?>">Guide2</a></li>
-                    <li><a href="<?php echo site_url('Guide/4')?>">Guide3</a></li>
-                    <li><a href="<?php echo site_url('Guide/5')?>">Guide4</a></li>
-                </ol>
+            <div class="guide">
+                <br/><br/>
+                <li><a href="<?php echo site_url('Guide')?>">Guide</a></li>
+                    <ol>
+                        <li><a href="<?php echo site_url('Guide/1')?>">Guide1</a></li>
+                        <form action="<?php echo site_url('Guide/1/edit')?>" method="get">
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form action="<?php echo site_url('Guide/1/update')?>" method="post">
+                            <input type="hidden" name="_method" value="put" />
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="<?php echo site_url('Guide/1/delete')?>" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <li><a href="<?php echo site_url('Guide/2')?>">Guide2</a></li>
+                        <li><a href="<?php echo site_url('Guide/3')?>">Guide3</a></li>
+                        <li><a href="<?php echo site_url('Guide/4')?>">Guide4</a></li>
+                        <li><a href="<?php echo site_url('Guide/5')?>">Guide5</a></li>
+                    </ol>
                 <form action="<?php echo site_url('Guide/new')?>" method="get">
                     <button type="submit">New</button>
                 </form>
                 <form action="<?php echo site_url('Guide')?>" method="post">
                     <button type="submit">Create</button>
                 </form>
-
 			</div>
 
 			<div class="footer">

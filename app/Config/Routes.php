@@ -73,6 +73,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->resource('guide', ['controller'=>'Guide_Controller']);
+$routes->resource('Guide', ['controller'=>'Guide_Controller']);
+$routes->resource('user',  ['controller'=>'User_Controller']);
+$routes->resource('User',  ['controller'=>'User_Controller']);
 
 /**
  * --------------------------------------------------------------------

@@ -2,27 +2,27 @@
 
 namespace App\Controllers;
 use CodeIgniter\Controller;
-use User;
+use Guide;
 use CodeIgniter\API\ResponseTrait;
 
-class User_Controller extends Controller
+class Guide_Controller extends Controller
 {
     use ResponseTrait;
     
     public function index()
     {
-        $model = new User();
+        $model = new Guide();
         
-        $user = $model->findAll();
-        return $this->respond($user, 200, 'Users Found');
+        $guide = $model->findAll();
+        return $this->respond($guide, 200, 'Guides Found');
     }
     
     public function show($id)
     {
-        $model = new User();
+        $model = new Guide();
         
-        $user = $model->find($id);
-        return $this->respond($user, 200, 'User Found');
+        $guide = $model->find($id);
+        return $this->respond($guide, 200, 'Guide Found');
     }
     
     public function new() {
