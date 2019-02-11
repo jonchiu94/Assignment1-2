@@ -1,33 +1,43 @@
 <?php
+
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use User;
 use CodeIgniter\API\ResponseTrait;
 
-class User_controller extends Controller {
+class User_Controller extends Controller
+{
     use ResponseTrait;
     
     public function index()
     {
         $model = new User();
-        $User = $model->findAll();
-        return $this->respond($User, 200, 'All Users Found');
+        
+        $user = $model->findAll();
+        return $this->respond($user, 200, 'Users Found');
     }
-    public function show($id) {
+    
+    public function show($id)
+    {
         $model = new User();
-        $User = $model->find($id);
-        return $this->respond($User, 200, 'This User found');
+        
+        $user = $model->find($id);
+        return $this->respond($user, 200, 'User Found');
     }
-        public function new() {
-        return $this->failUnauthorized('Not implemented', 401, "Not Implemented");
+    
+    public function new() {
+        return $this->failUnauthorized('Not implemented');
     }
     public function edit($id) {
-        return $this->failUnauthorized('Not implemented', 401, "Not Implemented");
+        return $this->failUnauthorized('Not implemented');
+    }
+    public function create() {
+        return $this->failUnauthorized('Not implemented');
     }
     public function update($id) {
-        return $this->failUnauthorized('Not implemented', 401, "Not Implemented");
+        return $this->failUnauthorized('Not implemented');
     }
     public function delete($id) {
-        return $this->failUnauthorized('Not implemented', 401, "Not Implemented");
+        return $this->failUnauthorized('Not implemented');
     }
 }

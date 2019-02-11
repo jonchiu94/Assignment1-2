@@ -15,11 +15,11 @@ class Guide extends Model
     
     public function find($id = null)
     {
-        return $this->$date[$id];
+        return $this->data[$id];
     }
     
     public function findAll(int $limit = 0, int $offset = 0)
     {
-        return $this->$data;
+        return $this->data;
     }
 }
